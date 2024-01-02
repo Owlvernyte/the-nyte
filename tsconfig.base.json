@@ -1,20 +1,27 @@
 {
-    "compileOnSave": false,
-    "compilerOptions": {
-        "rootDir": ".",
-        "sourceMap": true,
-        "declaration": false,
-        "moduleResolution": "node",
-        "emitDecoratorMetadata": true,
-        "experimentalDecorators": true,
-        "importHelpers": true,
-        "target": "es2015",
-        "module": "esnext",
-        "lib": ["es2020", "dom"],
-        "skipLibCheck": true,
-        "skipDefaultLibCheck": true,
-        "baseUrl": ".",
-        "paths": {}
-    },
-    "exclude": ["node_modules", "tmp"]
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "lib": ["es2020", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@the-nyte/qr-maker": ["libs/qr-maker/src/index.ts"],
+      "@the-nyte/qr-maker/server": ["libs/qr-maker/src/server.ts"],
+      "@the-nyte/ui": ["libs/shared/ui/src/index.ts"],
+      "@the-nyte/ui/server": ["libs/shared/ui/src/server.ts"],
+      "@the-nyte/url-shortener": ["libs/url-shortener/src/index.ts"],
+      "@the-nyte/url-shortener/server": ["libs/url-shortener/src/server.ts"]
+    }
+  },
+  "exclude": ["node_modules", "tmp"]
 }
