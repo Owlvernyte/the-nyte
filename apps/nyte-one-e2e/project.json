@@ -1,0 +1,26 @@
+{
+    "name": "nyte-one-e2e",
+    "$schema": "../../node_modules/nx/schemas/project-schema.json",
+    "sourceRoot": "apps/nyte-one-e2e/src",
+    "targets": {
+        "e2e": {
+            "executor": "@nx/cypress:cypress",
+            "options": {
+                "cypressConfig": "apps/nyte-one-e2e/cypress.config.ts",
+                "testingType": "e2e",
+                "devServerTarget": "nyte-one:serve"
+            },
+            "configurations": {
+                "production": {
+                    "devServerTarget": "nyte-one:serve:production"
+                }
+            }
+        },
+        "lint": {
+            "executor": "@nx/eslint:lint",
+            "outputs": ["{options.outputFile}"]
+        }
+    },
+    "tags": [],
+    "implicitDependencies": ["nyte-one"]
+}
